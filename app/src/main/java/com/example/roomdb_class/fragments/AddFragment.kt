@@ -10,34 +10,42 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.roomdb_class.R
-import com.example.roomdb_class.data.User
-import com.example.roomdb_class.data.UserViewModel
-import kotlinx.android.synthetic.main.fragment_add.*
-import kotlinx.android.synthetic.main.fragment_add.view.*
+import com.example.roomdb_class.models.User
+import com.example.roomdb_class.viewmodels.UserViewModel
+import com.example.roomdb_class.databinding.FragmentAddBinding
 
 class AddFragment : Fragment() {
+
+    private var _binding: FragmentAddBinding? = null
+    private val binding get() = _binding!!
+
     private lateinit var mUserViewModel: UserViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_add, container, false)
+    ): View {
+        _binding = FragmentAddBinding.inflate(inflater, container, false)
+        val view = binding.root
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-        view.add_btn.setOnClickListener {
+        binding.addBtn.setOnClickListener{
             addToDatabase()
         }
 
         return view
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
     private fun addToDatabase() {
-        val firstName = edit_text_firstname.text.toString()
-        val secondName = edit_text_secondname.text.toString()
-        val age = edit_text_age.text
+        val firstName = binding.editTextFirstname.text.toString()
+        val secondName = binding.editTextLastname.text.toString()
+        val age = binding.editTextAge.text
         if(checkInputs(firstName, secondName, age)) {
             Toast.makeText(requireContext(), "Please fill all fields", Toast.LENGTH_SHORT).show()
             return
