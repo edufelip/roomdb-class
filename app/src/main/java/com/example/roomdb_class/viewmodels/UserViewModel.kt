@@ -5,8 +5,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.example.roomdb_class.data.UserDatabase
-import com.example.roomdb_class.domain.UserRepo
-import com.example.roomdb_class.models.User
+import com.example.roomdb_class.domain.repositories.UserRepo
+import com.example.roomdb_class.domain.models.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

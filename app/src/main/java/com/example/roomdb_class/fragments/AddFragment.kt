@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.roomdb_class.R
-import com.example.roomdb_class.models.User
+import com.example.roomdb_class.domain.models.User
 import com.example.roomdb_class.viewmodels.UserViewModel
 import com.example.roomdb_class.databinding.FragmentAddBinding
 
@@ -41,7 +41,7 @@ class AddFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
+    
     private fun addToDatabase() {
         val firstName = binding.editTextFirstname.text.toString()
         val secondName = binding.editTextLastname.text.toString()

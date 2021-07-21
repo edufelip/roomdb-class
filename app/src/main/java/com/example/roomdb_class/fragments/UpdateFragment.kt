@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.roomdb_class.R
 import com.example.roomdb_class.viewmodels.UserViewModel
 import com.example.roomdb_class.databinding.FragmentUpdateBinding
-import com.example.roomdb_class.models.User
+import com.example.roomdb_class.domain.models.User
 
 class UpdateFragment : Fragment() {
     private var _binding: FragmentUpdateBinding? = null

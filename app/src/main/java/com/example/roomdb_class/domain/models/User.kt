@@ -1,4 +1,4 @@
-package com.example.roomdb_class.models
+package com.example.roomdb_class.domain.models
 
 import android.os.Parcelable
 import androidx.room.Entity

@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.roomdb_class.models.User
+import com.example.roomdb_class.domain.models.User
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class UserDatabase: RoomDatabase() {

@@ -2,7 +2,7 @@ package com.example.roomdb_class.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.roomdb_class.models.User
+import com.example.roomdb_class.domain.models.User
 
 @Dao
 interface UserDao {

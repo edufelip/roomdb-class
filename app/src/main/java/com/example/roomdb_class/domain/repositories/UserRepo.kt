@@ -1,8 +1,8 @@
-package com.example.roomdb_class.domain
+package com.example.roomdb_class.domain.repositories
 
 import androidx.lifecycle.LiveData
 import com.example.roomdb_class.data.UserDao
-import com.example.roomdb_class.models.User
+import com.example.roomdb_class.domain.models.User
 
 class UserRepo (private val userDao: UserDao) {
     val listUsers: LiveData<List<User>> = userDao.listUsers()

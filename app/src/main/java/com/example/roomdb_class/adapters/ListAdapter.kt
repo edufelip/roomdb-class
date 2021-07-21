@@ -4,10 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.example.roomdb_class.models.User
 import com.example.roomdb_class.databinding.RecyclerItemBinding
+import com.example.roomdb_class.domain.models.User
 import com.example.roomdb_class.fragments.ListFragmentDirections
-import kotlinx.coroutines.withContext
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     private var userList = listOf<User>()
