@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.example.roomdb_class.fragments.UpdateFragment"
-        android:label="fragment_update"
+        android:label="Update"
         tools:layout="@layout/fragment_update" >
         <action
             android:id="@+id/action_updateFragment_to_listFragment"
